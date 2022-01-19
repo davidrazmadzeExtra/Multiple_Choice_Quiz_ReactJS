@@ -13,6 +13,7 @@ function App() {
       {/* 2. Current Score  */}
       <h2>Score: 3</h2>
 
+      {/* 3. Show results or show the question game  */}
       {showResults ? (
         /* 4. Final Results */
         <div className="final-results">
@@ -21,7 +22,7 @@ function App() {
           <button>Restart game</button>
         </div>
       ) : (
-        /* 3. Question Card  */
+        /* 5. Question Card  */
         <div className="question-card">
           {/* Current Question  */}
           <h2>Question: 1 out of 5</h2>
@@ -29,7 +30,7 @@ function App() {
 
           {/* List of possible answers  */}
           <ul>
-            <li onClick={() => setShowResults(true)}>Boston</li>
+            <li>Boston</li>
             <li>Miami</li>
             <li>Washington DC</li>
             <li>Dallas</li>
