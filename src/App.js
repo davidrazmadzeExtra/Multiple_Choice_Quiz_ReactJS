@@ -57,8 +57,19 @@ function App() {
 
   // Helper Functions
 
+  /* A possible answer was clicked */
   const optionClicked = (isCorrect) => {
-    console.log(isCorrect);
+    // Increment the score 
+    if (isCorrect) {
+      setScore(score + 1)
+    }
+
+    if (currentQuestion + 1 < questions.length) {
+      setCurrentQuestion(currentQuestion + 1);
+    } else {
+      setShowResults(true);
+    }
+
   };
 
   return (
