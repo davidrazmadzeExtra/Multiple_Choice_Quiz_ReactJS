@@ -59,9 +59,9 @@ function App() {
 
   /* A possible answer was clicked */
   const optionClicked = (isCorrect) => {
-    // Increment the score 
+    // Increment the score
     if (isCorrect) {
-      setScore(score + 1)
+      setScore(score + 1);
     }
 
     if (currentQuestion + 1 < questions.length) {
@@ -69,7 +69,13 @@ function App() {
     } else {
       setShowResults(true);
     }
+  };
 
+  /* Resets the game back to default */
+  const restartGame = () => {
+    setScore(0);
+    setCurrentQuestion(0);
+    setShowResults(false);
   };
 
   return (
@@ -89,7 +95,7 @@ function App() {
             {score} out of {questions.length} correct - (
             {(score / questions.length) * 100}%)
           </h2>
-          <button>Restart game</button>
+          <button onClick={() => restartGame()} >Restart game</button>
         </div>
       ) : (
         /* 5. Question Card  */
