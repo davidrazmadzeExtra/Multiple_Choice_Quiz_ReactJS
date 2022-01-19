@@ -3,7 +3,7 @@ import "./App.css";
 
 function App() {
   // Properties
-  const [showResults, setShowResults] = useState(false);
+  const [showResults, setShowResults] = useState(true);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
 
@@ -70,7 +70,7 @@ function App() {
         /* 4. Final Results */
         <div className="final-results">
           <h1>Final Results</h1>
-          <h2>1 out of 5 correct - (20%)</h2>
+          <h2>{score} out of {questions.length} correct - ({(score / questions.length) * 100}%)</h2>
           <button>Restart game</button>
         </div>
       ) : (
