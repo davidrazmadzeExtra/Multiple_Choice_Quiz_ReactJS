@@ -81,7 +81,7 @@ function App() {
   return (
     <div className="App">
       {/* 1. Header  */}
-      <h1>Capital Quiz</h1>
+      <h1>USA Quiz 🇺🇸</h1>
 
       {/* 2. Current Score  */}
       <h2>Score: {score}</h2>
@@ -95,7 +95,7 @@ function App() {
             {score} out of {questions.length} correct - (
             {(score / questions.length) * 100}%)
           </h2>
-          <button onClick={() => restartGame()} >Restart game</button>
+          <button onClick={() => restartGame()}>Restart game</button>
         </div>
       ) : (
         /* 5. Question Card  */
