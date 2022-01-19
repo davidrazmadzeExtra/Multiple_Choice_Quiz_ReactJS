@@ -13,7 +13,7 @@ function App() {
       <div className="question-card">
         {/* Current Question  */}
         <h2>Question: 1 out of 5</h2>
-        <h3>What is the capital of America?</h3>
+        <h3 className="question-text">What is the capital of America?</h3>
 
         <ul>
           <li>Boston</li>
